@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
 public class DiatonicScale {
-    private String key;
+    private Key key;
     private int[] octRange;
     private String tonality;
-    private String[] augmentations;
+    //private String[] augmentations;
     //private ArrayList<String> augArr;
 
-    public void setKey(String key){
+    public void setKey(Key key){
         this.key = key;
     }
     public void setOctRange(int[] octRange){
@@ -16,23 +16,26 @@ public class DiatonicScale {
     public void setTonality(String tonality){
         this.tonality = tonality;
     }
-    public void setAugmentations(String[] augmentations) {
-        this.augmentations = augmentations;
-    }
+    //public void setAugmentations(String[] augmentations) {
+    //    this.augmentations = augmentations;
+   // }
 
     //public void setAugArr(ArrayList<String> augArr){
     //    this.augArr = augArr;
     //}
 
     public void display() {
-
         System.out.println("Key: " + key + " " + tonality);
+        System.out.println("Octave range: " + octRange[0] + " to " + octRange[1]);
 
-        System.out.println("Octave range: " + octRange);
 
-        for (int i = 0; i <= augmentations.length; i++) {
-            System.out.println("Augmentation: "+augmentations[i]);
-        }
+
+
+
+
+        //for (int i = 0; i <= augmentations.length; i++) {
+        //    System.out.println("Augmentation: "+augmentations[i]);
+        //}
     }
 
     //public boolean isValid(){
