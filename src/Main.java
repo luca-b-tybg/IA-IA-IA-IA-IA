@@ -1,8 +1,9 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Key key = Key.B;
+        Key key = Key.D;
         int[] octRange = {2,6};
         Tonality tonality = Tonality.Minor;
 
@@ -10,12 +11,15 @@ public class Main {
         test.setKey(key);
         test.setOctRange(octRange);
         test.setTonality(tonality);
+        System.out.println("Number of notes: " + test.numOfNotes());
         test.display();
-        test.numOfNotes();
         test.allNotes();
 
-        CircleOfFifths x = new CircleOfFifths();
-        System.out.println(x.getTone(Key.A, Tonality.Minor));
+        System.out.println(Key.D);
+
+
+        //CircleOfFifths x = new CircleOfFifths();
+        //System.out.println(x.getTone(Key.A, Tonality.Minor));
 
     }
 }

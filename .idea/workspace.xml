@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d620a3c-d62c-4042-a6b1-f2ad8994d9cb" name="Changes" comment="ik its a mess rn but at least theres a few more directions&#10;&#10;-you can use enum to return false if values of key isn't a-g and other stuff too&#10;-use abstraction and remove augmentations because it just makes unnecessary problems and stuff, tonality is enough">
+    <list default="true" id="5d620a3c-d62c-4042-a6b1-f2ad8994d9cb" name="Changes" comment="ftgjjlh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DiatonicScale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DiatonicScale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -24,33 +24,36 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;luca-b-tybg&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/luca-b-tybg/IA-IA-IA-IA-IA.git&quot;,
+    &quot;accountId&quot;: &quot;be374019-a023-4b56-ad1d-19a7f5ffcdc8&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2ta4YRQrJXvdZBtUfBItasQ9K8B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-  </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="IA-IA-IA-IA-IA" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/19bulavitchi_l/IdeaProjects/IA-IA-IA-IA-IA/src/Main.java&quot;
+  }
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,14 +71,7 @@
       <option name="project" value="LOCAL" />
       <updated>1740579405441</updated>
     </task>
-    <task id="LOCAL-00002" summary="ik its a mess rn but at least theres a few more directions&#10;&#10;-you can use enum to return false if values of key isn't a-g and other stuff too&#10;-use abstraction and remove augmentations because it just makes unnecessary problems and stuff, tonality is enough">
-      <created>1741212882323</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1741212882323</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -91,7 +87,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ftgjjlh" />
-    <MESSAGE value="ik its a mess rn but at least theres a few more directions&#10;&#10;-you can use enum to return false if values of key isn't a-g and other stuff too&#10;-use abstraction and remove augmentations because it just makes unnecessary problems and stuff, tonality is enough" />
-    <option name="LAST_COMMIT_MESSAGE" value="ik its a mess rn but at least theres a few more directions&#10;&#10;-you can use enum to return false if values of key isn't a-g and other stuff too&#10;-use abstraction and remove augmentations because it just makes unnecessary problems and stuff, tonality is enough" />
+    <option name="LAST_COMMIT_MESSAGE" value="ftgjjlh" />
   </component>
 </project>
