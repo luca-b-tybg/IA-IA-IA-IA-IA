@@ -5,7 +5,7 @@ public class DiatonicScale {
     private int[] octRange;
     private Tonality tonality;
     private int scaleLength;
-    private String[] NOTES = {"A","B","C","D","E","F","G"};
+    private Key NOTES;
 
     //setters
     public void setKey(Key key){this.key = key;}
@@ -33,12 +33,14 @@ public class DiatonicScale {
         //takes a note and finds the index of it in the NOTES list
         boolean isFound = false;
         int noteIndex = 0;
+        System.out.println(NOTES(n).ordinal());
+
         while((isFound == false)){
-            for(int i=0; i<NOTES.length; i++){
-                if (NOTES[i] == n){
-                    noteIndex = i;
-                    isFound = true;
-                }
+            for(int i=0; i<7; i++){
+                //if (NOTES.ordinal(i) == n){
+                //    noteIndex = i;
+                //    isFound = true;
+                //}
             }
         }
         return noteIndex;
@@ -47,11 +49,9 @@ public class DiatonicScale {
     //creates a list of the scale ie A1 B1 C1 ... G5 A6
     public void allNotes(){
         //organises scale so that tonic/key the is requested is first
-        System.out.println(getKey());
-
         String[] organisedScale = new String[numOfNotes()];
-        organisedScale[0] = getKey().toString();
-        System.out.println(findNote(organisedScale[0]));
+        organisedScale[0] = (getKey().toString()) + (Integer.toString(octRange[0]));
+        System.out.println(organisedScale[0]);
 
         /*outputs from start of organised scale to end
         for(int i =0;i<(octRange[1]-octRange[0]);i++) {
