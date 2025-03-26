@@ -4,15 +4,19 @@ public class DiatonicScale {
     private Key key;
     private int[] octRange;
     private Tonality tonality;
-
     private int scaleLength;
     private String[] NOTES = {"A","B","C","D","E","F","G"};
 
+    //setters
     public void setKey(Key key){this.key = key;}
     public void setOctRange(int[] octRange){this.octRange = octRange;}
     public void setTonality(Tonality tonality){this.tonality = tonality;}
 
+    //getters
     public Key getKey(){return key;}
+    public int[] getOctRange() {return octRange;}
+    public Tonality getTonality() {return tonality;}
+
 
     public void display() {
         System.out.println("Key: " + key + " " + tonality);
@@ -43,10 +47,11 @@ public class DiatonicScale {
     //creates a list of the scale ie A1 B1 C1 ... G5 A6
     public void allNotes(){
         //organises scale so that tonic/key the is requested is first
+        System.out.println(getKey());
+
         String[] organisedScale = new String[numOfNotes()];
         organisedScale[0] = getKey().toString();
         System.out.println(findNote(organisedScale[0]));
-
 
         /*outputs from start of organised scale to end
         for(int i =0;i<(octRange[1]-octRange[0]);i++) {
@@ -55,12 +60,10 @@ public class DiatonicScale {
             }
         }
         System.out.println(key.toString() + octRange[1]);
-
          */
     }
 
+    //
 
-    //make a class that takes the octave range start and end
-    //and then saves all the notes (ie C2 D2 E2 ... C3)
 }
 

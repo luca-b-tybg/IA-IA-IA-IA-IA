@@ -16,7 +16,7 @@ public class Main {
         test.allNotes();
 
         System.out.println(Key.D);
-
+        System.out.println(test.getKey());
 
         //CircleOfFifths x = new CircleOfFifths();
         //System.out.println(x.getTone(Key.A, Tonality.Minor));
@@ -37,3 +37,5 @@ class Tone {
 
 enum Key {A, B, C, D, E, F, G, a, b, c, d, e, f, g}
 enum Tonality {Major, Minor, Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian}
+enum Cadence {Perfect, Plagal, Imperfect, Interrupted}
+enum ChordType {Tonic, Supertonic, Mediant, Subdominant, Dominant, Submediant, LeadingTone}
