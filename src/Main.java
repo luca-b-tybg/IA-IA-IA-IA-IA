@@ -11,7 +11,7 @@ public class Main {
         test.setKey(key);
         test.setOctRange(octRange);
         test.setTonality(tonality);
-        System.out.println("Number of notes: " + test.numOfNotes());
+        System.out.println("Number of notes: " + test.getScaleLength());
         test.display();
         test.allNotes();
 
@@ -32,7 +32,7 @@ class Tone {
     }
 }
 
-enum Key {A, B, C, D, E, F, G, a, b, c, d, e, f, g}
-enum Tonality {Major, Minor, Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian}
-enum Cadence {Perfect, Plagal, Imperfect, Interrupted}
-enum ChordType {Tonic, Supertonic, Mediant, Subdominant, Dominant, Submediant, LeadingTone}
+enum Key {A, B, C, D, E, F, G;}
+enum Tonality {Major, Minor, Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian;}
+enum Cadence {Perfect, Plagal, Imperfect, Interrupted;}
+enum ChordType {Tonic, Supertonic, Mediant, Subdominant, Dominant, Submediant, LeadingTone;}
