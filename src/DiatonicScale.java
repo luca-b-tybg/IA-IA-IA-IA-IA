@@ -39,22 +39,46 @@ public class DiatonicScale {
     //creates a list of the scale ie A1 B1 C1 ... G5 A6
     public void allNotes(){
         //organises scale so that tonic/key the is requested is first
-        organisedScale = new String[getScaleLength()];
+        setScaleLength();
+        organisedScale = new String[scaleLength];
+        int tonicIndex = findNoteIndex(key.toString(), NOTES);
 
-        //organisedScale[0] = (getKey().toString()) + (Integer.toString(octRange[0]));
-        //System.out.println(organisedScale[0]);
+        int scaleIndex = 0; // track position in organisedScale
+        int currentOctave = octRange[0]; // start at first octave
 
-        /*
-        for(int i =0;i<(octRange[1]-octRange[0]);i++) {
-            for(int j=0;j<7;j++){
-                System.out.println(NOTES[j] + (i+octRange[0]));
+        for (int o = octRange[0]; o < octRange[1]; o++) { // loop over octaves
+
+            for (int i = 0; i < 7; i++) { // loop over notes in a single octave
+                int currentNoteIndex = (tonicIndex + i) % 7; // wrap around within 7 notes
+
+                // store the note and its corresponding octave
+                organisedScale[scaleIndex] = NOTES[currentNoteIndex] + currentOctave;
+                scaleIndex++;
+
+                // only increase octave when wrapping back to A (index 0)
+                if (currentNoteIndex == 6) { // after G, move to the next octave
+                    currentOctave++;
+                }
             }
+            organisedScale[scaleIndex] = key.toString() + currentOctave;
         }
-        System.out.println(key.toString() + octRange[1]);
-         */
+        for(int i=0; i<organisedScale.length; i++){
+            System.out.println(organisedScale[i]);
+        }
     }
 
-    //
+    public void tonalityOrganiser(){
+        //tonality is based on the number of semitones between notes
+        //the MAJOR key will be the default tonality
+        //when another tonality is taken, it will change the number of semitones between notes of the major scale
+        //and the new list of semitones will be used to apply sharps/flats in tonality applier
+    }
+
+    public void tonalityApplier(){
+        //takes tonality requested, which calculates semitones between notes
+        //processes this and applies flats/sharps accordingly, and changes the organisedScale so that any note that
+        //is changed will display whether it is a flat or sharp afterwards
+    }
 
 }
 
