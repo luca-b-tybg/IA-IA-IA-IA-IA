@@ -15,6 +15,8 @@ public class Main {
         test.display();
         test.allNotes();
 
+        test.tonalityOrganiser();
+
         //CircleOfFifths x = new CircleOfFifths();
         //System.out.println(x.getTone(Key.A, Tonality.Minor));
 

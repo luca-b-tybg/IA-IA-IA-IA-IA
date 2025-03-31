@@ -7,6 +7,8 @@ public class DiatonicScale {
     private int scaleLength;
     private String[] NOTES = {"A", "B", "C", "D", "E", "F", "G"};
     private String[] organisedScale;
+    private int[] MAJORSCALETONES = {2,2,1,2,2,2,1};
+
 
     //setters
     public void setKey(Key key){this.key = key;}
@@ -49,7 +51,7 @@ public class DiatonicScale {
         for (int o = octRange[0]; o < octRange[1]; o++) { // loop over octaves
 
             for (int i = 0; i < 7; i++) { // loop over notes in a single octave
-                int currentNoteIndex = (tonicIndex + i) % 7; // wrap around within 7 notes
+                int currentNoteIndex = (tonicIndex + i) % 7; // makes sure tonic index doesnt exceed 7
 
                 // store the note and its corresponding octave
                 organisedScale[scaleIndex] = NOTES[currentNoteIndex] + currentOctave;
@@ -70,14 +72,24 @@ public class DiatonicScale {
     public void tonalityOrganiser(){
         //tonality is based on the number of semitones between notes
         //the MAJOR key will be the default tonality
-        //when another tonality is taken, it will change the number of semitones between notes of the major scale
+        //when another tonality is taken, it will change the number of semitones
+        //between notes of the major scale
         //and the new list of semitones will be used to apply sharps/flats in tonality applier
+
+        //the C Major scale can be used as a reference, it has {2,2,1,2,2,2,1} as semitones
     }
 
     public void tonalityApplier(){
         //takes tonality requested, which calculates semitones between notes
         //processes this and applies flats/sharps accordingly, and changes the organisedScale so that any note that
         //is changed will display whether it is a flat or sharp afterwards
+        //Major = {1,0,1,0,1,1,0,1,0,1,0,1,1} 1 represents notes in the scale, 0 represents
+        //notes that aren't in the scale.
+
+
+        //input: the organised scale, and the tonality chosen
+        //
+        //output: a list of the organised scale, but sharps/flats are added to it
     }
 
 }
