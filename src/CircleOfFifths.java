@@ -3,19 +3,19 @@ import java.util.Map;
 
 public class CircleOfFifths {
     private Key key;
-    private Tonality tonality;
+    private Mode mode;
     private Cadence cadence;
     private ChordType chordType;
 
     //setters
     public void setKey(Key key) {this.key = key;}
-    public void setTonality(Tonality tonality) {this.tonality = tonality;}
+    public void setMode(Mode mode){this.mode = mode;}
     public void setCadence(Cadence cadence) {this.cadence = cadence;}
     public void setChordType(ChordType chordType) {this.chordType = chordType;}
 
     //getters
     public Key getKey() {return key;}
-    public Tonality getTonality() {return tonality;}
+    public Mode getMode(){return mode;}
     public Cadence getCadence() {return cadence;}
     public ChordType getChordType() {return chordType;}
 
@@ -26,7 +26,7 @@ public class CircleOfFifths {
         databse.put("A-MINOR", new Tone("sad"));
     }
 
-    Tone getTone(Key key, Tonality tonality) {
-        return databse.get(key.name() + "-" + tonality.name());
+    Tone getTone(Key key, Mode mode) {
+        return databse.get(key.name() + "-" + mode.name());
     }
 }

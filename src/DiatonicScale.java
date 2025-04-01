@@ -3,34 +3,50 @@ import java.util.ArrayList;
 public class DiatonicScale {
     private Key key;
     private int[] octRange;
-    private Tonality tonality;
     private int scaleLength;
-    private String[] NOTES = {"A", "B", "C", "D", "E", "F", "G"};
-    private String[] organisedScale;
-    private int[] MAJORSCALETONES = {2,2,1,2,2,2,1};
+    private Mode mode;
 
+    private String[][] semitones = {
+            {"2", "2", "1", "2", "2", "2", "1"}, //ionian etc
+            {"2", "1", "2", "2", "2", "1", "2"},
+            {"1", "2", "2", "2", "1", "2", "2"},
+            {"2", "2", "2", "1", "2", "2", "1"},
+            {"2", "2", "1", "2", "2", "1", "2"},
+            {"2", "1", "2", "2", "1", "2", "2"},
+            {"1", "2", "2", "1", "2", "2", "2"}
+    };
+    private String[] octavesOS; // final list of the scale of all octaves
+
+    private String[] NOTES = {"C","D","E","F","G","A","B"};
+    private String[] MAJORSCALETONES = {"2","2","1","2","2","2","1"};
+
+    private String[] organisedScale = new String[7]; // reorganised version of cmajor scale
+    private String[] scaleTones = new String[7]; // the semitones of the tonality chosen
+
+    private String[] organisedCTones = new String[7];
 
     //setters
     public void setKey(Key key){this.key = key;}
     public void setOctRange(int[] octRange){this.octRange = octRange;}
-    public void setTonality(Tonality tonality){this.tonality = tonality;}
     public void setScaleLength(){scaleLength = (octRange[1] - octRange[0]) * 7 + 1;}
+    public void setMode(Mode mode){this.mode = mode;}
 
     //getters
     public Key getKey(){return key;}
     public int[] getOctRange() {return octRange;}
-    public Tonality getTonality() {return tonality;}
     public int getScaleLength(){return scaleLength;}
+    public Mode getMode(){return mode;}
 
     public void display() {
-        System.out.println("Key: " + getKey() + " " + getTonality());
+        System.out.println("Key: " + getKey() + " " + getMode());
         System.out.println("Octave range: " + octRange[0] + " to " + octRange[1]);
     }
 
     //searches for a note in a list of notes
     public int findNoteIndex(String note, String[] noteList){
         int noteIndex = 0;
-        for(int i=0;i<7;i++){
+        int listLength = noteList.length;
+        for(int i=0;i<listLength;i++){
             if(noteList[i] == note){
                 noteIndex = i;
             }
@@ -38,58 +54,68 @@ public class DiatonicScale {
         return noteIndex;
     }
 
-    //creates a list of the scale ie A1 B1 C1 ... G5 A6
-    public void allNotes(){
-        //organises scale so that tonic/key the is requested is first
+    //function to reorder the scale so that it starts from the tonic
+    public String[] reorganizeScale(String tonic) {
+        int tonicIndex = findNoteIndex(tonic, NOTES);
+        for (int i=0; i<7; i++) {
+            organisedScale[i] = NOTES[(tonicIndex + i) % 7]; //shift scale to start at tonic
+            organisedCTones[i] = MAJORSCALETONES[(tonicIndex + i) % 7];
+        }
+        return organisedScale;
+    }
+
+
+    //function to generate the full scale with octaves
+    public void generateFullScaleWithOctaves() {
         setScaleLength();
-        organisedScale = new String[scaleLength];
-        int tonicIndex = findNoteIndex(key.toString(), NOTES);
-
-        int scaleIndex = 0; // track position in organisedScale
-        int currentOctave = octRange[0]; // start at first octave
-
-        for (int o = octRange[0]; o < octRange[1]; o++) { // loop over octaves
-
-            for (int i = 0; i < 7; i++) { // loop over notes in a single octave
-                int currentNoteIndex = (tonicIndex + i) % 7; // makes sure tonic index doesnt exceed 7
-
-                // store the note and its corresponding octave
-                organisedScale[scaleIndex] = NOTES[currentNoteIndex] + currentOctave;
+        octavesOS = new String[scaleLength];
+        String[] reorderedScale = reorganizeScale(key.toString()); //get the ordered scale
+        modeApplicator();
+        int scaleIndex = 0;
+        int currentOctave = octRange[0]; //start at first octave
+        for (int o = octRange[0]; o < octRange[1]; o++) { //loop over octaves
+            for (int i = 0; i < 7; i++) { //loop over notes in a single octave
+                octavesOS[scaleIndex] = reorderedScale[i] + currentOctave;
                 scaleIndex++;
-
-                // only increase octave when wrapping back to A (index 0)
-                if (currentNoteIndex == 6) { // after G, move to the next octave
+                if (reorderedScale[i].equals("B")) { //move to the next octave after B
                     currentOctave++;
                 }
             }
-            organisedScale[scaleIndex] = key.toString() + currentOctave;
         }
-        for(int i=0; i<organisedScale.length; i++){
-            System.out.println(organisedScale[i]);
+        octavesOS[scaleIndex] = key.toString() + currentOctave; //add last note in octave range
+        //print the full scale
+        for (String note : octavesOS) {
+            System.out.println(note);
         }
     }
 
-    public void tonalityOrganiser(){
-        //tonality is based on the number of semitones between notes
-        //the MAJOR key will be the default tonality
-        //when another tonality is taken, it will change the number of semitones
-        //between notes of the major scale
-        //and the new list of semitones will be used to apply sharps/flats in tonality applier
+    //take tonality, and assign the right pattern of semitones to the scaleTones array
+    public void toneAssigner(){
+        scaleTones = semitones[mode.ordinal()];
 
-        //the C Major scale can be used as a reference, it has {2,2,1,2,2,2,1} as semitones
     }
 
-    public void tonalityApplier(){
-        //takes tonality requested, which calculates semitones between notes
-        //processes this and applies flats/sharps accordingly, and changes the organisedScale so that any note that
-        //is changed will display whether it is a flat or sharp afterwards
-        //Major = {1,0,1,0,1,1,0,1,0,1,0,1,1} 1 represents notes in the scale, 0 represents
-        //notes that aren't in the scale.
+    //we have an algorithm that orders the c major scale into whatever key is chosen
+    //i should order the c major scales semitones in the same way
 
+    //then i should compare this list of semitones to the list of semitones of the mode i want to change it to
+    //where theres no difference the there is no change to either list
+    //where theres a difference, i should change the reorganised c scale semitones to match the chosen modes semitones,
+    //and at that same index in the keys note list i should mark the difference with a sharp or flat
 
-        //input: the organised scale, and the tonality chosen
-        //
-        //output: a list of the organised scale, but sharps/flats are added to it
+    public void modeApplicator(){
+    toneAssigner();
+
+        for(int i=0; i<7; i++){
+            int st = Integer.parseInt(scaleTones[i]);
+            int oct = Integer.parseInt(organisedCTones[i]);
+            if(st > oct){
+                organisedScale[i] = organisedScale[i] + "#";
+            }
+            if(st < oct){
+                organisedScale[i] = organisedScale[i] + "b";
+            }
+        }
     }
 
 }
