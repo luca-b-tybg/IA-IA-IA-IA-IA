@@ -1,9 +1,6 @@
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
-        Key key = Key.D;
+        Key key = Key.C;
         int[] octRange = {2,6};
         Mode mode = Mode.Aeolian;
 

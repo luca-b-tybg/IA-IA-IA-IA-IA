@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class DiatonicScale {
     private Key key;
     private int[] octRange;
@@ -29,7 +27,7 @@ public class DiatonicScale {
     public void setKey(Key key){this.key = key;}
     public void setOctRange(int[] octRange){this.octRange = octRange;}
     public void setScaleLength(){scaleLength = (octRange[1] - octRange[0]) * 7 + 1;}
-    public void setMode(Mode mode){this.mode = mode;}
+    public void setMode(Mode mode){this.mode = mode;scaleTones = semitones[mode.ordinal()];}
 
     //getters
     public Key getKey(){return key;}
@@ -90,10 +88,7 @@ public class DiatonicScale {
     }
 
     //take tonality, and assign the right pattern of semitones to the scaleTones array
-    public void toneAssigner(){
-        scaleTones = semitones[mode.ordinal()];
 
-    }
 
     //we have an algorithm that orders the c major scale into whatever key is chosen
     //i should order the c major scales semitones in the same way
@@ -103,19 +98,34 @@ public class DiatonicScale {
     //where theres a difference, i should change the reorganised c scale semitones to match the chosen modes semitones,
     //and at that same index in the keys note list i should mark the difference with a sharp or flat
 
-    public void modeApplicator(){
-    toneAssigner();
-
+    public void findSharpsAndFlats(){
         for(int i=0; i<7; i++){
+            //i is the index of the current note in list
+            //j is the next index in the list
+            int j = i+1;
+
+            if(j == 7){
+                j=0;
+            }
+
+
             int st = Integer.parseInt(scaleTones[i]);
             int oct = Integer.parseInt(organisedCTones[i]);
-            if(st > oct){
-                organisedScale[i] = organisedScale[i] + "#";
-            }
-            if(st < oct){
-                organisedScale[i] = organisedScale[i] + "b";
+            int st1 = Integer.parseInt(scaleTones[j]);
+            int oct1 = Integer.parseInt(organisedCTones[j]);
+
+            if(st < oct && st1 > oct1) {
+                int temp = st1;
+                organisedCTones[i] = Integer.toString(st);
+                organisedCTones[j] = Integer.toString(temp);
+                organisedScale[j] += "b";
             }
         }
+    }
+
+    public void modeApplicator(){
+    setMode(mode);
+    findSharpsAndFlats();
     }
 
 }
