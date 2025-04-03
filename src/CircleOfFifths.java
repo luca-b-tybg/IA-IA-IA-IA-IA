@@ -1,6 +1,3 @@
-import java.util.HashMap;
-import java.util.Map;
-
 public class CircleOfFifths {
     private Key key;
     private Mode mode;
@@ -19,14 +16,4 @@ public class CircleOfFifths {
     public Cadence getCadence() {return cadence;}
     public ChordType getChordType() {return chordType;}
 
-
-
-    private Map<String, Tone> databse = new HashMap<>();
-    public CircleOfFifths () {
-        databse.put("A-MINOR", new Tone("sad"));
-    }
-
-    Tone getTone(Key key, Mode mode) {
-        return databse.get(key.name() + "-" + mode.name());
-    }
 }
