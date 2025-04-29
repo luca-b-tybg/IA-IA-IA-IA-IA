@@ -62,10 +62,10 @@ public class GenerateFullScaleWithOctaves {
         }
     }
 
-    public void fullFinalScale(int[]octRange, String[] organisedScale, String[] cOrganisedScale) {
+    public void fullFinalScale(int[]octRange, Generate7NoteScale scaleGenerator) {
         this.octRange = octRange;
         setScaleLength();
-        setScale(organisedScale, cOrganisedScale);
+        setScale(scaleGenerator.getOrganisedScale(), scaleGenerator.getcOrganisedScale());
         generateFullScaleWithOctaves();
     }
 }

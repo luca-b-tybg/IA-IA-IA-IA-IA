@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d620a3c-d62c-4042-a6b1-f2ad8994d9cb" name="Changes" comment="fixxxdd">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/COFUserInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DSUserInputResult.java" afterDir="false" />
+    <list default="true" id="5d620a3c-d62c-4042-a6b1-f2ad8994d9cb" name="Changes" comment="menu and stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CadenceFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CircleOfFifths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CircleOfFifths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenerateFullScaleWithOctaves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerateFullScaleWithOctaves.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserInputResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate7NoteScale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Generate7NoteScale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generateFullScaleWithOctaves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerateFullScaleWithOctaves.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/takeUserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSTakeUserInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +52,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scratch (1)" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Scratch" />
       <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
@@ -70,6 +69,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Java Scratch.Scratch (1)" />
         <item itemvalue="Application.Scratch" />
         <item itemvalue="Java Scratch.Scratch" />
       </list>
@@ -106,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1744505989316</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="menu and stuff">
+      <created>1745945020125</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745945020125</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +131,7 @@
     <MESSAGE value="ftgjjlh" />
     <MESSAGE value="okay?" />
     <MESSAGE value="fixxxdd" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixxxdd" />
+    <MESSAGE value="menu and stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu and stuff" />
   </component>
 </project>

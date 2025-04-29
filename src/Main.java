@@ -108,9 +108,10 @@ public class Main {
         Generate7NoteScale sevenNoteTest = new Generate7NoteScale();
         sevenNoteTest.generateFinalScale(key, mode);
 
+
         // Step 2: Generate the full scale across multiple octaves
         GenerateFullScaleWithOctaves octaveTest = new GenerateFullScaleWithOctaves();
-        octaveTest.fullFinalScale(octRange, sevenNoteTest.getOrganisedScale(), sevenNoteTest.getcOrganisedScale());
+        octaveTest.fullFinalScale(octRange, sevenNoteTest );
     }
 
     /**
