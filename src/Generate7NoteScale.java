@@ -3,7 +3,7 @@
  * It handles the proper calculation of notes and applies necessary sharps/flats
  * to maintain the correct tonal relationships for the selected mode.
  */
-public class generate7NoteScale {
+public class Generate7NoteScale {
     // Core components for scale generation
     private KeyFile.Key key;                        // The tonic/root note of the scale (e.g., C, D, E, etc.)
     private ModeFile.Mode mode;                     // The mode of the scale (Ionian/Major, Dorian, Phrygian, etc.)
@@ -44,25 +44,17 @@ public class generate7NoteScale {
     private String[] organisedCTones = new String[7];   // Reorganized semitone pattern of C major
 
     // Getters and setters
-    public void setKey(KeyFile.Key key) {this.key = key;}
 
     /**
      * Sets the mode and updates the scale tones based on the selected mode
      */
-    public void setMode(ModeFile.Mode mode) {
+    private void setMode(ModeFile.Mode mode) {
         this.mode = mode;
         scaleTones = semitones[mode.ordinal()];  // Get semitone pattern for the chosen mode
     }
 
     public String[] getcOrganisedScale() {return cOrganisedScale;}
     public String[] getOrganisedScale(){return organisedScale;}
-
-    /**
-     * Displays the current key and mode configuration
-     */
-    public void display() {
-        System.out.println("Scale Key: " +  key + " " + mode);
-    }
 
     /**
      * Reorders the C major scale to start from the tonic note of the selected key
@@ -211,5 +203,12 @@ public class generate7NoteScale {
      */
     private int findNoteIndex(int index) {
         return index;
+    }
+
+    public void generateFinalScale(KeyFile.Key key, ModeFile.Mode mode) {
+        this.key = key;
+        setMode(mode);
+        reorganizeScale();        // Reorganize C major to start from the chosen key
+        findSharpsAndFlats();     // Apply accidentals to match the mode
     }
 }

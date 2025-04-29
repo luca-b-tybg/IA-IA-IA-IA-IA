@@ -2,7 +2,7 @@
  * This class generates a complete musical scale across multiple octaves
  * based on a 7-note scale pattern provided by generate7NoteScale
  */
-public class generateFullScaleWithOctaves {
+public class GenerateFullScaleWithOctaves {
 
     private int[] octRange;                  // Range of octaves to generate (e.g., [2,6] means octaves 2-5 inclusive)
     private int scaleLength;                 // Total number of notes in the full scale
@@ -11,7 +11,6 @@ public class generateFullScaleWithOctaves {
     private String[] finalScale;             // The complete scale across all octaves
 
     // Setters
-    public void setOctRange(int[] octRange) {this.octRange = octRange;}
 
     /**
      * Calculates the total length of the scale based on octave range
@@ -61,5 +60,12 @@ public class generateFullScaleWithOctaves {
         for (String note : finalScale) {
             System.out.println(note);
         }
+    }
+
+    public void fullFinalScale(int[]octRange, String[] organisedScale, String[] cOrganisedScale) {
+        this.octRange = octRange;
+        setScaleLength();
+        setScale(organisedScale, cOrganisedScale);
+        generateFullScaleWithOctaves();
     }
 }
