@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import javax.swing.*;
 
 /**
  * Main class that coordinates the music theory application
@@ -122,18 +123,20 @@ public class Main {
         System.out.println("==========================");
 
         // Get input for the circle of fifths
-        DSTakeUserInput userInput = new DSTakeUserInput();
-        DSUserInputResult result = userInput.getUserInput();
+        COFTakeUserInput userInput = new COFTakeUserInput();
+        COFUserInputResult result = userInput.getUserInput();
 
         // Display basic information about the circle of fifths for selected key
         KeyFile.Key key = result.getKey();
-        ModeFile.Mode mode = result.getMode();
+        COFMMFile.COFMM COFMM = result.getCOFMM();
 
-        System.out.println("\nSelected key: " + key + " " + mode);
-        System.out.println("Circle of Fifths functionality will be expanded in future updates.");
+        System.out.println("\nSelected key: " + key + " " + COFMM);
 
-        // Future: Actually use CircleOfFifths class once it's fully implemented
-        // CircleOfFifths cof = new CircleOfFifths();
+        JFrame frame = new JFrame("Circle of Fifths");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 400);
+        frame.add(new CirclePanel());
+        frame.setVisible(true);
     }
 
     /**

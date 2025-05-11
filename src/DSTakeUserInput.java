@@ -6,7 +6,6 @@ public class DSTakeUserInput {
         int octRange[] = {0,0};
         KeyFile.Key key = null;
         ModeFile.Mode mode = null;
-        ChordTypeFile.ChordType chordType = null;
 
         // Accept valid octave range input
         String startOctEntered;
@@ -72,13 +71,5 @@ public class DSTakeUserInput {
         System.out.println("Mode is: " + mode);
 
         return new DSUserInputResult(octRange, key, mode);
-    }
-
-    public static void main(String[] args) {
-        DSTakeUserInput userInput = new DSTakeUserInput();
-        DSUserInputResult result = userInput.getUserInput();
-        System.out.println("Octave range from main: " + result.getOctRange());
-        System.out.println("Key from main: " + result.getKey());
-        System.out.println("Mode from main: " + result.getMode());
     }
 }

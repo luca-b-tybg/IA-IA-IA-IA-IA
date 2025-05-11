@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 public class CircleOfFifths {
     /*
     take key and mode the user is working in
@@ -28,4 +31,6 @@ public class CircleOfFifths {
    also output the notes in each chord needed ie c major will output c, e and g, d major will output d, f#, and a, etc (just to avoid confusion)
 
 */
+
+
 }

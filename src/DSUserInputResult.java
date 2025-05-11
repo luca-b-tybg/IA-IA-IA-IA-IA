@@ -13,8 +13,6 @@ public class DSUserInputResult {
 
     public int[] getOctRange() {return octRange;}
     public KeyFile.Key getKey() {return key;}
-    public ModeFile.Mode getMode() {
-        return mode;
-    }
+    public ModeFile.Mode getMode() {return mode;}
 
 }

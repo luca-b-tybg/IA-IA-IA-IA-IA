@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d620a3c-d62c-4042-a6b1-f2ad8994d9cb" name="Changes" comment="menu and stuff">
+    <list default="true" id="5d620a3c-d62c-4042-a6b1-f2ad8994d9cb" name="Changes" comment="menu and stuff 2">
+      <change afterPath="$PROJECT_DIR$/src/COFMMFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/COFTakeUserInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/COFUserInputResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CirclePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DrawCircleOfFifths.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenerateFullScaleWithOctaves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerateFullScaleWithOctaves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/COFUserInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CircleOfFifths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CircleOfFifths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSTakeUserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSTakeUserInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSUserInputResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSUserInputResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1745945020125</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="menu and stuff 2">
+      <created>1745945887838</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745945887838</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +147,7 @@
     <MESSAGE value="okay?" />
     <MESSAGE value="fixxxdd" />
     <MESSAGE value="menu and stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="menu and stuff" />
+    <MESSAGE value="menu and stuff 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu and stuff 2" />
   </component>
 </project>
