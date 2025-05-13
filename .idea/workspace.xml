@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d620a3c-d62c-4042-a6b1-f2ad8994d9cb" name="Changes" comment="menu and stuff 2">
-      <change afterPath="$PROJECT_DIR$/src/COFMMFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/COFTakeUserInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/COFUserInputResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CirclePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DrawCircleOfFifths.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DSGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/COFUserInput.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CircleOfFifths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CircleOfFifths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DSTakeUserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSTakeUserInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DSUserInputResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSUserInputResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,19 +24,38 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "luca-b-tybg"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/luca-b-tybg/IA-IA-IA-IA-IA.git",
+    "accountId": "8ed08fd0-9376-41a4-a3e9-29f44cac5899"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="2ta4YRQrJXvdZBtUfBItasQ9K8B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JAVA" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />

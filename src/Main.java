@@ -97,6 +97,10 @@ public class Main {
      */
     private static void runScaleGenerator() {
 
+        System.out.println("SEQUENCE: main started");
+        DSGUI gui = new DSGUI();
+        System.out.println("SEQUENCE: main finished");
+
         // Step 0: Call user input
         DSTakeUserInput userInput = new DSTakeUserInput();
         DSUserInputResult result = userInput.getUserInput();
