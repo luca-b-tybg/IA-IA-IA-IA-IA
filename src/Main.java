@@ -96,10 +96,7 @@ public class Main {
      * This preserves the original scale generation logic from the original Main class
      */
     private static void runScaleGenerator() {
-
-        System.out.println("SEQUENCE: main started");
         DSGUI gui = new DSGUI();
-        System.out.println("SEQUENCE: main finished");
 
         // Step 0: Call user input
         DSTakeUserInput userInput = new DSTakeUserInput();
