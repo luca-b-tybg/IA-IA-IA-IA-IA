@@ -98,19 +98,21 @@ public class Main {
     private static void runScaleGenerator() {
         DSGUI gui = new DSGUI();
 
-        // Step 0: Call user input
-        DSTakeUserInput userInput = new DSTakeUserInput();
-        DSUserInputResult result = userInput.getUserInput();
+        // Wait for user to finish input in the GUI, then get the result
+        // You may want to use a callback or observer pattern for production code
+        // For a simple approach, you can check for null in a loop (not ideal for production)
+        while (gui.getUserInputResult() == null) {
+            try { Thread.sleep(100); } catch (InterruptedException e) {}
+        }
+        DSUserInputResult result = gui.getUserInputResult();
 
         int[] octRange = result.getOctRange();
         KeyFile.Key key = result.getKey();
         ModeFile.Mode mode = result.getMode();
 
-        // Step 1: Generate the basic 7-note scale pattern
         Generate7NoteScale sevenNoteTest = new Generate7NoteScale();
         sevenNoteTest.generateFinalScale(key, mode);
 
-        // Step 2: Generate the full scale across multiple octaves
         GenerateFullScaleWithOctaves octaveTest = new GenerateFullScaleWithOctaves();
         octaveTest.fullFinalScale(octRange, sevenNoteTest );
     }
