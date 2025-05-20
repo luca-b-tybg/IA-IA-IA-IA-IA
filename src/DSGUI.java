@@ -2,131 +2,78 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class DSGUI extends JFrame {
+    private JTextField keyField;
+    private JComboBox<String> modeBox;
+    private JTextField octaveRangeField;
+    private JButton generateButton;
 
-    private JTextField SOuserInput; // Starting octave
-    private JTextField EOuserInput; // Ending octave
-    private JTextField KuserInput;  // Key
-    private JTextField TuserInput;  // Tonality/Mode
-    private JButton buttonOK;
-
-    // Variables to store user input
-    private int startingOctave;
-    private int endingOctave;
-    private String key;
-    private String tonality;
-
-    // Variables for result
-    private int[] octRange;
-    private KeyFile.Key keyEnum;
-    private ModeFile.Mode modeEnum;
-    private DSUserInputResult userInputResult;
+    // Placeholder for your result object
+    private DSUserInputResult userInputResult = null;
 
     public DSGUI() {
-        setTitle("Diatonic scale");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400, 300);
-        setLayout(null);
+        setTitle("Diatonic Scale Generator");
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setSize(420, 250);
+        setLocationRelativeTo(null);
+        setLayout(null); // No layout manager
 
-        SOuserInput = addLabelAndField("Starting octave (2-5):", 30);
-        EOuserInput = addLabelAndField("Ending octave (3-6):", 70);
-        KuserInput  = addLabelAndField("Key (A-G):", 110);
-        TuserInput  = addLabelAndField("Tonality (Mode):", 150);
+        // Key label and field
+        JLabel keyLabel = new JLabel("Key:");
+        keyLabel.setBounds(30, 30, 80, 25);
+        add(keyLabel);
 
-        buttonOK = new JButton("OK");
-        buttonOK.setBounds(150, 200, 100, 30);
-        add(buttonOK);
+        keyField = new JTextField();
+        keyField.setBounds(120, 30, 120, 25);
+        add(keyField);
 
-        buttonOK.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (validateInputs()) {
-                    // If valid, you can now use userInputResult elsewhere
-                    // For demonstration, show a success dialog
-                    JOptionPane.showMessageDialog(null,
-                            "Inputs accepted:\n" +
-                                    "Starting Octave: " + startingOctave +
-                                    "\nEnding Octave: " + endingOctave +
-                                    "\nKey: " + keyEnum +
-                                    "\nTonality: " + modeEnum
-                    );
-                    // Optionally, you can close the GUI or signal to main that input is ready
-                    // dispose();
-                }
-                // If not valid, error dialogs are already shown in validateInputs()
-            }
-        });
+        // Mode label and combo box
+        JLabel modeLabel = new JLabel("Mode:");
+        modeLabel.setBounds(30, 70, 80, 25);
+        add(modeLabel);
+
+        String[] modes = {"Major", "Minor", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Locrian"};
+        modeBox = new JComboBox<>(modes);
+        modeBox.setBounds(120, 70, 120, 25);
+        add(modeBox);
+
+        // Octave range label and field
+        JLabel octaveLabel = new JLabel("Octave Range (e.g. 3-5):");
+        octaveLabel.setBounds(30, 110, 180, 25);
+        add(octaveLabel);
+
+        octaveRangeField = new JTextField();
+        octaveRangeField.setBounds(210, 110, 60, 25);
+        add(octaveRangeField);
+
+        // Generate button
+        generateButton = new JButton("Generate Scale");
+        generateButton.setBounds(120, 160, 150, 30);
+        add(generateButton);
+
+        // Button action
+        generateButton.addActionListener(e -> onGenerate());
 
         setVisible(true);
     }
 
-    private JTextField addLabelAndField(String labelText, int y) {
-        JLabel label = new JLabel(labelText);
-        label.setBounds(50, y, 150, 30);
-        add(label);
+    // Example method to handle button click
+    private void onGenerate() {
+        String key = keyField.getText().trim();
+        String mode = (String) modeBox.getSelectedItem();
+        String octaveRange = octaveRangeField.getText().trim();
 
-        JTextField field = new JTextField();
-        field.setBounds(200, y, 100, 30);
-        add(field);
+        // Here you would validate input and create your DSUserInputResult object
+        // For now, just show a message dialog
+        JOptionPane.showMessageDialog(this,
+                "Key: " + key + "\nMode: " + mode + "\nOctave Range: " + octaveRange,
+                "Input Received", JOptionPane.INFORMATION_MESSAGE);
 
-        return field;
+        // Example: set userInputResult (replace with your actual logic)
+        // userInputResult = new DSUserInputResult(...);
     }
 
-    // Validate all inputs and show error messages in the GUI
-    private boolean validateInputs() {
-        // Validate starting octave
-        try {
-            startingOctave = Integer.parseInt(SOuserInput.getText().trim());
-            if (startingOctave < 2 || startingOctave > 5) {
-                JOptionPane.showMessageDialog(this, "Starting octave must be between 2 and 5.");
-                return false;
-            }
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Starting octave must be a number between 2 and 5.");
-            return false;
-        }
-
-        // Validate ending octave
-        try {
-            endingOctave = Integer.parseInt(EOuserInput.getText().trim());
-            if (endingOctave < 3 || endingOctave > 6) {
-                JOptionPane.showMessageDialog(this, "Ending octave must be between 3 and 6.");
-                return false;
-            }
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Ending octave must be a number between 3 and 6.");
-            return false;
-        }
-
-        // Validate key (A-G)
-        key = KuserInput.getText().trim().toUpperCase();
-        try {
-            keyEnum = KeyFile.Key.valueOf(key);
-        } catch (IllegalArgumentException e) {
-            JOptionPane.showMessageDialog(this, "Key must be one of: A, B, C, D, E, F, G.");
-            return false;
-        }
-
-        // Validate mode
-        tonality = TuserInput.getText().trim().toUpperCase();
-        try {
-            modeEnum = ModeFile.Mode.valueOf(tonality);
-        } catch (IllegalArgumentException e) {
-            JOptionPane.showMessageDialog(this, "Mode must be one of: Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian.");
-            return false;
-        }
-
-        // All inputs valid, set up result object
-        octRange = new int[] { startingOctave, endingOctave };
-        userInputResult = new DSUserInputResult(octRange, keyEnum, modeEnum);
-        return true;
-    }
-
-    // Getter for result, so main can access it
+    // This is just a stub for compatibility with your main code
     public DSUserInputResult getUserInputResult() {
         return userInputResult;
-    }
-
-    public static void main(String[] args) {
-        new DSGUI();
     }
 }
