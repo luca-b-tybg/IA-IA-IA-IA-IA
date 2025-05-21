@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d620a3c-d62c-4042-a6b1-f2ad8994d9cb" name="Changes" comment="menu and stuff 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="5d620a3c-d62c-4042-a6b1-f2ad8994d9cb" name="Changes" comment="gui start for DS. also a bit of progress on gui for COF. asf as f df  dasfluyh as we  fiuf wey ywef wef yfew yywef we fuwe fwe f" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745945887838</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="gui start for DS. also a bit of progress on gui for COF. asf as f df  dasfluyh as we  fiuf wey ywef wef yfew yywef we fuwe fwe f">
+      <option name="closed" value="true" />
+      <created>1747833129300</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747833129300</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +163,7 @@
     <MESSAGE value="fixxxdd" />
     <MESSAGE value="menu and stuff" />
     <MESSAGE value="menu and stuff 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="menu and stuff 2" />
+    <MESSAGE value="gui start for DS. also a bit of progress on gui for COF. asf as f df  dasfluyh as we  fiuf wey ywef wef yfew yywef we fuwe fwe f" />
+    <option name="LAST_COMMIT_MESSAGE" value="gui start for DS. also a bit of progress on gui for COF. asf as f df  dasfluyh as we  fiuf wey ywef wef yfew yywef we fuwe fwe f" />
   </component>
 </project>
