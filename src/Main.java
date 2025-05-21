@@ -2,6 +2,11 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
+        SwingUtilities.invokeLater(DSGUI::new);
+    }
+}
+/*
+    public static void main(String[] args) {
         // Launch the GUI menu directly
         SwingUtilities.invokeLater(MusicTheoryMenu::new);
     }
@@ -16,17 +21,10 @@ public class Main {
             setLayout(null); // No layout manager
 
             // Title bar
-            JLabel borderTop = new JLabel("===============================================");
-            borderTop.setBounds(20, 10, 380, 20);
-            add(borderTop);
 
             JLabel titleLabel = new JLabel("WELCOME TO THE MUSIC THEORY TOOLKIT", SwingConstants.CENTER);
             titleLabel.setBounds(20, 40, 380, 30);
             add(titleLabel);
-
-            JLabel borderBottom = new JLabel("===============================================");
-            borderBottom.setBounds(20, 70, 380, 20);
-            add(borderBottom);
 
             // Menu buttons
             JButton btn1 = new JButton("1. Diatonic Scale Generator");
@@ -67,7 +65,7 @@ public class Main {
         }
     }
 
-    // --- Generator Methods ---
+    //generator methods
 
     private static void runScaleGenerator() {
         DSGUI gui = new DSGUI();
@@ -101,7 +99,8 @@ public class Main {
     }
 
     private static void runMelodyGenerator() {
-        // Melody generator logic here (currently commented out in your code)
-        JOptionPane.showMessageDialog(null, "Melody generation will be implemented in future updates.");
+        JOptionPane.showMessageDialog(null, "unfinished");
     }
 }
+
+ */

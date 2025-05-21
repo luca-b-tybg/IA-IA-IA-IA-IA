@@ -2,8 +2,9 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class DSGUI extends JFrame {
+
     private JTextField keyField;
-    private JComboBox<String> modeBox;
+    private JComboBox modeBox;
     private JTextField octaveRangeField;
     private JButton generateButton;
 
@@ -11,6 +12,7 @@ public class DSGUI extends JFrame {
     private DSUserInputResult userInputResult = null;
 
     public DSGUI() {
+
         setTitle("Diatonic Scale Generator");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(420, 250);
@@ -31,7 +33,7 @@ public class DSGUI extends JFrame {
         modeLabel.setBounds(30, 70, 80, 25);
         add(modeLabel);
 
-        String[] modes = {"Major", "Minor", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Locrian"};
+        String[] modes = {"Ionian", "Aeolian", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Locrian"};
         modeBox = new JComboBox<>(modes);
         modeBox.setBounds(120, 70, 120, 25);
         add(modeBox);
@@ -58,6 +60,7 @@ public class DSGUI extends JFrame {
 
     // Example method to handle button click
     private void onGenerate() {
+
         String key = keyField.getText().trim();
         String mode = (String) modeBox.getSelectedItem();
         String octaveRange = octaveRangeField.getText().trim();

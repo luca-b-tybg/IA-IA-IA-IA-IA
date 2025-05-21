@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d620a3c-d62c-4042-a6b1-f2ad8994d9cb" name="Changes" comment="dsgui input completed">
+    <list default="true" id="5d620a3c-d62c-4042-a6b1-f2ad8994d9cb" name="Changes" comment="menu and stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DSGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -24,19 +24,37 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "luca-b-tybg"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/luca-b-tybg/IA-IA-IA-IA-IA.git",
+    "accountId": "1522d47d-789d-4aa0-922f-13218c024ba3"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
   <component name="ProjectId" id="2ta4YRQrJXvdZBtUfBItasQ9K8B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JAVA" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -113,21 +131,7 @@
       <option name="project" value="LOCAL" />
       <updated>1745945020125</updated>
     </task>
-    <task id="LOCAL-00005" summary="menu and stuff 2">
-      <created>1745945887838</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1745945887838</updated>
-    </task>
-    <task id="LOCAL-00006" summary="dsgui input completed">
-      <created>1747329751847</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1747329751848</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,8 +150,6 @@
     <MESSAGE value="okay?" />
     <MESSAGE value="fixxxdd" />
     <MESSAGE value="menu and stuff" />
-    <MESSAGE value="menu and stuff 2" />
-    <MESSAGE value="dsgui input completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="dsgui input completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu and stuff" />
   </component>
 </project>
