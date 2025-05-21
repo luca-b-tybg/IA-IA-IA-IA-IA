@@ -1,11 +1,7 @@
 import javax.swing.*;
 
 public class Main {
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(DSGUI::new);
-    }
-}
-/*
+
     public static void main(String[] args) {
         // Launch the GUI menu directly
         SwingUtilities.invokeLater(MusicTheoryMenu::new);
@@ -70,8 +66,8 @@ public class Main {
     private static void runScaleGenerator() {
         DSGUI gui = new DSGUI();
         while (gui.getUserInputResult() == null) {
-            try { Thread.sleep(100); } catch (InterruptedException e) {}
-        }
+        SwingUtilities.invokeLater(DSGUI::new);
+
         DSUserInputResult result = gui.getUserInputResult();
         int[] octRange = result.getOctRange();
         KeyFile.Key key = result.getKey();
@@ -82,6 +78,7 @@ public class Main {
 
         GenerateFullScaleWithOctaves octaveTest = new GenerateFullScaleWithOctaves();
         octaveTest.fullFinalScale(octRange, sevenNoteTest );
+        }
     }
 
     private static void runCircleOfFifths() {
@@ -103,4 +100,3 @@ public class Main {
     }
 }
 
- */
