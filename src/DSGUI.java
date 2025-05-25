@@ -5,8 +5,13 @@ public class DSGUI extends JFrame {
 
     private JTextField keyField;
     private JComboBox modeBox;
-    private JTextField octaveRangeField;
+    private JTextField StartingOctaveRangeField;
+    private JTextField EndingOctaveRangeField;
     private JButton generateButton;
+
+    public interface UserInputListener { void onUserInput(DSUserInputResult result);}
+    private UserInputListener userInputListener;
+    public void setUserInputListener(UserInputListener listener) {this.userInputListener = listener;}
 
     // Placeholder for your result object
     private DSUserInputResult userInputResult = null;
@@ -38,18 +43,26 @@ public class DSGUI extends JFrame {
         modeBox.setBounds(120, 70, 120, 25);
         add(modeBox);
 
-        // Octave range label and field
-        JLabel octaveLabel = new JLabel("Octave Range (e.g. 3-5):");
-        octaveLabel.setBounds(30, 110, 180, 25);
-        add(octaveLabel);
 
-        octaveRangeField = new JTextField();
-        octaveRangeField.setBounds(210, 110, 60, 25);
-        add(octaveRangeField);
+        // Octave range label and field
+        JLabel startingOctave = new JLabel("Starting octave: ");
+        startingOctave.setBounds(30, 110, 180, 25);
+        add(startingOctave);
+        StartingOctaveRangeField = new JTextField();
+        StartingOctaveRangeField.setBounds(210, 110, 60, 25);
+        add(StartingOctaveRangeField);
+
+        JLabel endingOctave = new JLabel("Ending Octave:");
+        endingOctave.setBounds(30, 150, 180, 25);
+        add(endingOctave);
+        EndingOctaveRangeField = new JTextField();
+        EndingOctaveRangeField.setBounds(210, 150, 60, 25);
+        add(EndingOctaveRangeField);
+
 
         // Generate button
         generateButton = new JButton("Generate Scale");
-        generateButton.setBounds(120, 160, 150, 30);
+        generateButton.setBounds(120, 190, 150, 30);
         add(generateButton);
 
         // Button action
@@ -63,12 +76,13 @@ public class DSGUI extends JFrame {
 
         String key = keyField.getText().trim();
         String mode = (String) modeBox.getSelectedItem();
-        String octaveRange = octaveRangeField.getText().trim();
+        String startOctaveRange = StartingOctaveRangeField.getText().trim();
+        String endOctaveRange = EndingOctaveRangeField.getText().trim();
 
         // Here you would validate input and create your DSUserInputResult object
         // For now, just show a message dialog
         JOptionPane.showMessageDialog(this,
-                "Key: " + key + "\nMode: " + mode + "\nOctave Range: " + octaveRange,
+                "Key: " + key + "\nMode: " + mode + "\nStarting octave: " + startOctaveRange + "\nEnding octave: " + endOctaveRange,
                 "Input Received", JOptionPane.INFORMATION_MESSAGE);
 
         // Example: set userInputResult (replace with your actual logic)

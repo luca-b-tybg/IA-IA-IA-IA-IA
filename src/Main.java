@@ -65,21 +65,25 @@ public class Main {
 
     private static void runScaleGenerator() {
         DSGUI gui = new DSGUI();
-        while (gui.getUserInputResult() == null) {
-        SwingUtilities.invokeLater(DSGUI::new);
 
-        DSUserInputResult result = gui.getUserInputResult();
-        int[] octRange = result.getOctRange();
-        KeyFile.Key key = result.getKey();
-        ModeFile.Mode mode = result.getMode();
+        // Set up a listener or callback for when the user submits input
+        gui.setUserInputListener(result -> {
+            int[] octRange = result.getOctRange();
+            KeyFile.Key key = result.getKey();
+            ModeFile.Mode mode = result.getMode();
 
-        Generate7NoteScale sevenNoteTest = new Generate7NoteScale();
-        sevenNoteTest.generateFinalScale(key, mode);
+            Generate7NoteScale sevenNoteTest = new Generate7NoteScale();
+            sevenNoteTest.generateFinalScale(key, mode);
 
-        GenerateFullScaleWithOctaves octaveTest = new GenerateFullScaleWithOctaves();
-        octaveTest.fullFinalScale(octRange, sevenNoteTest );
-        }
+            GenerateFullScaleWithOctaves octaveTest = new GenerateFullScaleWithOctaves();
+            octaveTest.fullFinalScale(octRange, sevenNoteTest);
+
+            gui.dispose(); // Close the input window after processing
+        });
+
+        gui.setVisible(true); // Show the GUI
     }
+
 
     private static void runCircleOfFifths() {
         COFTakeUserInput userInput = new COFTakeUserInput();
