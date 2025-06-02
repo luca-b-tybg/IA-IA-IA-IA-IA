@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d620a3c-d62c-4042-a6b1-f2ad8994d9cb" name="Changes" comment="dsgui input completed">
+    <list default="true" id="5d620a3c-d62c-4042-a6b1-f2ad8994d9cb" name="Changes" comment="gui update 3">
+      <change afterPath="$PROJECT_DIR$/src/MusicScaleVisualizerGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DSGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +36,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JAVA" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -127,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1747329751848</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="gui update 2">
+      <created>1748200988649</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1748200988649</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +156,8 @@
     <MESSAGE value="menu and stuff" />
     <MESSAGE value="menu and stuff 2" />
     <MESSAGE value="dsgui input completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="dsgui input completed" />
+    <MESSAGE value="gui update 2" />
+    <MESSAGE value="gui update 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="gui update 3" />
   </component>
 </project>
