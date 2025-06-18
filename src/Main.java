@@ -15,18 +15,9 @@ public class Main {
             setLocationRelativeTo(null);
             setLayout(null); // No layout manager
 
-            // Title bar
-            JLabel borderTop = new JLabel("===============================================");
-            borderTop.setBounds(20, 10, 380, 20);
-            add(borderTop);
-
             JLabel titleLabel = new JLabel("WELCOME TO THE MUSIC THEORY TOOLKIT", SwingConstants.CENTER);
             titleLabel.setBounds(20, 40, 380, 30);
             add(titleLabel);
-
-            JLabel borderBottom = new JLabel("===============================================");
-            borderBottom.setBounds(20, 70, 380, 20);
-            add(borderBottom);
 
             // Menu buttons
             JButton btn1 = new JButton("1. Diatonic Scale Generator");
